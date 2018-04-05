@@ -1,17 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -19,21 +9,63 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-
-    <!-- Your app title -->
-    <title>My App</title>
-
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
-
+    <title>LoanZapper</title>
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-
+   	<link rel="stylesheet" href="css/fonts/typicons.min.css" />
+   	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.circliful.css" type="text/css" />
+    <link rel="stylesheet" href="css/fonts/font.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inappstyles.css">
 </head>
 
 <body>
+	<!-- Login Screen -->
+	<div class="login-screen">
+ 		<!-- Default view-page layout -->
+      	<div class="view">
+        	<div class="page">
+          		<!-- page-content has additional login-screen content -->
+          		<div class="page-content login-screen-content">
+            		<div class="login-screen-title logo"><img src="lib/img/logo.png"></div>
+            		<!-- Login form -->
+            		<form id="login-form">
+	              		<div class="list-block">
+	                		<ul>
+	                  			<li class="item-content">
+	                    			<div class="item-inner">
+	                      				<div class="item-title label"><i class="typcn typcn-mail"></i></div>
+	                      				<div class="item-input">
+	                        				<input type="text" name="email" placeholder="Email Address">
+	                      				</div>
+	                    			</div>
+	                  			</li>
+	                  			<li class="item-content">
+	                    			<div class="item-inner">
+	                      				<div class="item-title label"><i class="typcn typcn-lock-closed-outline"></i></div>
+	                      				<div class="item-input">
+	                        				<input type="password" name="password" placeholder="Password">
+	                      				</div>
+	                    			</div>
+	                  			</li>
+	                		</ul>
+	              		</div>
+	              		<div class="list-block">
+	                		<ul>
+	                  			<li class="item-content">
+	                    			<a href="#" class="btn btn-primary loginBtn">Sign In</a> <a href="#" class="btn btn-danger close-login-screen">Cancel</a>
+	                  			</li>
+	                		</ul>
+	                		<div class="list-block-label">
+	                			<p>If you do not have an account, register by <a href="signup.html" class="close-login-screen">clicking here</a></p>
+	                		</div>
+	              		</div>
+            		</form>
+          		</div>
+        	</div>
+      	</div>
+	</div>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 
@@ -41,12 +73,11 @@
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
-        <div class="content-block">
+        <div class="content-block alerts-container">
             <p>Left panel content goes here</p>
         </div>
     </div>
-
-    <!-- Views -->
+	<!-- Views -->
     <div class="views">
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
@@ -54,27 +85,63 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">Awesome App</div>
+                    <div class="center sliding logo"><img src="lib/img/logo.png"></div>
                     <div class="right">
-                        <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    	<div class="halerts"><a href="alerts.html" class="link icon-only"><i class="typcn typcn-bell showAlertsBtn"></i></a></div>
                     </div>
                 </div>
             </div>
-            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through">
-                <!-- Page, "data-page" contains page name -->
                 <div data-page="index" class="page">
-                    <!-- Scrollable page content -->
                     <div class="page-content">
-                        <div class="content-block">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
-                        </div>
+                    	<div class="wrapper">
+							<div id="left-nav">
+								<ul class="nav">
+									<li><a href="documents.html"><i id="" class="typcn typcn-document-text"></i> Documents</a></li>
+									<li><a href="clients.html"><i id="" class="typcn typcn-group"></i> Clients</a></li>
+									<li><a href="listings.html"><i id="" class="typcn typcn-home-outline"></i> Listings</a></li>
+									<li><a href="events.html"><i id="" class="typcn typcn-calendar-outline"></i> Calendar</a></li>
+								</ul>
+							</div>
+							<div id="content">
+								<!-- Upcoming Events -->
+								<h3>Upcoming Events</h3>
+								<div id="event-sync"><a href="#" class="refresh-tool"><i class="typcn typcn-arrow-sync refreshBtn"></i></a></div>
+								<ul id="home-events" class="list">
+									<li data-id="1">
+										<span class="event-date">
+											<span class="event-day">7</span>
+											<span class="event-month">OCT</span>
+										</span>
+										<span class="event-content">
+											12:00pm - 1:30pm Meeting with client at Olive Garden
+										</span>
+										<span class="clr"></span>
+									</li>
+									<li data-id="1">
+										<span class="event-date">
+											<span class="event-day">12</span>
+											<span class="event-month">OCT</span>
+										</span>
+										<span class="event-content">
+											2:00pm - 2:30pm Showing at 815 S. Wingate Dr. -- Time Shurmer
+										</span>
+										<span class="clr"></span>
+									</li>
+									<li data-id="1">
+										<span class="event-date">
+											<span class="event-day">23</span>
+											<span class="event-month">OCT</span>
+										</span>
+										<span class="event-content">
+											12:00pm - 1:30pm Closing -- Realty Mortage (Tim Finstine)
+										</span>
+										<span class="clr"></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
                     </div>
                 </div>
             </div>
@@ -82,16 +149,32 @@
             <div class="toolbar">
                 <div class="toolbar-inner">
                     <!-- Toolbar links -->
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
+                    
+                    <a href="info.html" class="help-tool"><i class="typcn typcn typcn-info"></i> Help Center</a>
+                    <!--<a href="#" class="link icon-only open-panel"><i class="typcn typcn-cog"></i></a>-->
+                    <a href="settings.html" class="settings-tool"><i class="typcn typcn-cog"></i></a>
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="cordova.js"></script>
+    <div class="app-modal" id="">
+		<div class="modal-header">
+			<div class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="app-modal-title"></div>
+		</div>
+		<div class="modal-body"></div>
+		<div class="modal-footer"></div>
+	
+	</div>
+	<div id="confirm">
+	    <div class="title"></div>
+		<button type="button" id="btnYes">Yes</button>
+		<button type="button" id="btnNo">No</button>
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.circliful.min.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
-
 </html>

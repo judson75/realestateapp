@@ -1,4 +1,4 @@
-/*
+﻿/*
    statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
    statusbar plugin is added, it also adds default setting to make the content white via:
 
@@ -9,7 +9,247 @@
 
    See https://github.com/apache/cordova-plugin-statusbar
 */
-
-.statusbar-overlay {
-    background: #000000;
+html, * {
+	box-sizing: border-box;
 }
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	overflow-x: hidden;
+	margin: 0;
+	background: #444446;
+	color: #fff;
+	line-height: 1.4em;
+}
+
+a {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+h3 {color: #a9a9ae; font-weight: 300; font-size: 28px; margin: 2px 0 10px 0; }
+h4 {color: #a9a9ae; font-weight: 300; font-size: 24px; margin: 2px 0 10px 0; }
+
+input { font-size: 16px; border: 1px solid #ccc; padding: 5px; }
+
+input:required {
+    box-shadow:none;
+	
+}
+input:invalid {
+    box-shadow:none;
+}
+
+.clr {
+	clear: both;
+}
+
+.wrapper {
+	width: 92%; max-width: 1200px; margin: 0 auto;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #444446; 
+	color: #fff; 
+	height: 50px;
+}
+
+.navbar:after {
+	height: 0;
+}
+
+.home-btn a {
+	font-size: 34px;
+	color: #fff;
+}
+
+.page {
+	
+	background: #444446; /* Old browsers */
+	background: -moz-linear-gradient(top,  #444446 0%, #161616 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #444446 0%,#161616 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #444446 0%,#161616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444446', endColorstr='#161616',GradientType=0 ); /* IE6-9 */
+}
+
+#left-nav { width: 100%; float: none; display: block; }
+	#left-nav ul { list-style:  none; margin: 20px 0 0 0; padding: 0; }
+	#left-nav ul li { text-align: center; margin: 0 3px 3px 0; display: inline-block; font-size: 12px; }
+	#left-nav ul li:last-child { margin-right: 0; }
+	#left-nav ul li span { color: #fff; cursor: pointer;  }
+	#left-nav ul li span:hover { color: #fff;}
+	#left-nav i { 
+		font-size: 62px;
+		/*border: 3px solid #555555;*/
+		height: 75px;
+		width: 75px;
+		border-radius: 50%;
+		padding: 2px;
+		display: block;
+		line-height: 1em;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	#left-nav a {
+		color: #fff;
+	}
+
+ #content { width: 100%; float: none; display: block; margin: 25px 0 0 0; }
+	
+ #home-events {
+	margin: 0;
+ }
+
+ #home-events li {
+
+ }
+
+#home-events li a {
+
+}
+
+.event-date {
+	color: #fff;
+	text-align: center;
+	width: 80px;
+	float: left;
+}
+
+.event-day {
+	color: #fff;
+	font-size: 42px;
+	display: block;
+	line-height: .7em;
+	font-weight: 600;
+}
+
+.event-month {
+	line-height: .7em;
+	font-size: 12px;
+}
+
+.event-content {
+	font-family: 'Arial', san-serif;
+	font-size: 13px;
+	line-height: 1em;
+	color: #dfdfe6;
+}
+
+.event-content a {
+	color: #d7d7dd;
+}
+
+#content {
+	position: relative;
+}
+
+
+#event-sync {
+	position: absolute;
+	top: 2px;
+	right: 10px;
+}
+
+#event-sync a {
+	color: #fff;
+	font-size: 24px;
+}
+
+.list {
+	list-style:  none;
+	padding: 0;
+	margin: 0;
+}
+
+.list li {
+	border-bottom: 1px solid #59595c;
+	padding: 10px 0;
+	color: #fff;
+}
+
+.list li:last-child {
+	border-bottom: 0;
+}
+
+.list li a {
+	color: #fff;
+}
+
+.list .client-name {
+	font-size: 22px;
+	display:  block
+}
+
+
+.list .client-phone {
+	font-size: 14px;
+	color: #bfbfc5;
+}
+
+#listings-list {
+	
+}
+
+.listing-img {
+	width: 100px;
+	display:  inline-block;
+	vertical-align: top;
+}
+
+.listing-img img {
+	max-width: 90px;
+	height: auto;
+}
+
+.listing-info {
+	display:  inline-block;
+	vertical-align: top;
+}
+
+.listing-address {
+	font-size: 22px;
+	display:  block;
+	
+}
+
+.listing-address2 {
+	font-size: 12px;
+	color: #bfbfc5;
+}
+
+.month-header {
+	color: #fff; 
+	font-weight: 300; 
+	font-size: 28px; 
+	margin: 2px 0 10px 0;
+	text-align: center;
+}
+
+@media (max-width: 480px) {
+	
+	.hide-mobile {
+		display: none !important;
+	}
+	
+	.show-mobile {
+		display: block;
+	}
+		
+	.logo img {
+		max-width: 220px;
+		height: auto;
+	}
+
+}
+
+
+
