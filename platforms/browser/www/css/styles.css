@@ -47,6 +47,7 @@ input:invalid {
 
 .clr {
 	clear: both;
+	display: block;
 }
 
 .wrapper {
@@ -57,8 +58,6 @@ input:invalid {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #444446; 
-	color: #fff; 
 	height: 50px;
 }
 
@@ -148,6 +147,17 @@ input:invalid {
 	color: #d7d7dd;
 }
 
+
+.document-icon {
+	color: #fff;
+	text-align: center;
+	width: 80px;
+	float: left;
+	font-size: 26px;
+}
+
+
+
 #content {
 	position: relative;
 }
@@ -195,6 +205,12 @@ input:invalid {
 	color: #bfbfc5;
 }
 
+.list li h3 {
+	font-size: 18px;
+	margin: 10px 0 5px 0;
+	font-weight: 600;
+}
+
 #listings-list {
 	
 }
@@ -234,6 +250,32 @@ input:invalid {
 	text-align: center;
 }
 
+
+.search-block {
+	margin-bottom: 15px;
+	margin-top: -15px;
+}
+
+.search-box {
+	
+}
+
+.search-block input {
+	background-color: transparent;
+	border: 0;
+	width: calc(100% - 50px);
+	vertical-align: middle;
+}
+
+.search-block button {
+	background-color: transparent;
+	border: 0;
+	font-size: 24px;
+	padding: 5px 10px;
+	line-height: 1em;
+	vertical-align: middle;
+}
+
 @media (max-width: 480px) {
 	
 	.hide-mobile {
@@ -248,7 +290,7 @@ input:invalid {
 		max-width: 220px;
 		height: auto;
 	}
-
+	
 }
 
 

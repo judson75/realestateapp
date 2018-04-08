@@ -82,7 +82,7 @@ app.onPageInit('about', function (page) {
 	
 })
 
-$(document).on('click', '#home-events li', function() {
+$(document).on('click', '#home-events li, #calendar-events li, .client_appointments li', function() {
 	mainView.router.loadPage('event.html');
 });
 
