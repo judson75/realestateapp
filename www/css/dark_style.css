@@ -1,6 +1,4 @@
-﻿
-
-.navbar {
+﻿.navbar {
     background: #444446;
     color: #fff;
 }
@@ -29,4 +27,3 @@
 #event-page .event-date, #event-page .event-time {
 	color: #fff;
 }
-

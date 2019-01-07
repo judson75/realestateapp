@@ -276,6 +276,24 @@ input:invalid {
 	vertical-align: middle;
 }
 
+#event-page .event-date {
+	text-align: center;
+	font-size: 32px;
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+
+#event-page .event-time {
+	text-align: center;
+	font-size: 28px;
+	margin: 0 0 20px 0;
+
+}
+
+#event-page .event-description {
+	
+}
+
 @media (max-width: 480px) {
 	
 	.hide-mobile {
