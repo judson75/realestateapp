@@ -19,8 +19,6 @@ body {
 	font-weight: 300;
 	overflow-x: hidden;
 	margin: 0;
-	background: #444446;
-	color: #fff;
 	line-height: 1.4em;
 }
 
@@ -67,23 +65,17 @@ input:invalid {
 
 .home-btn a {
 	font-size: 34px;
-	color: #fff;
 }
 
 .page {
-	
-	background: #444446; /* Old browsers */
-	background: -moz-linear-gradient(top,  #444446 0%, #161616 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #444446 0%,#161616 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #444446 0%,#161616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444446', endColorstr='#161616',GradientType=0 ); /* IE6-9 */
+
 }
 
 #left-nav { width: 100%; float: none; display: block; }
 	#left-nav ul { list-style:  none; margin: 20px 0 0 0; padding: 0; }
 	#left-nav ul li { text-align: center; margin: 0 3px 3px 0; display: inline-block; font-size: 12px; }
 	#left-nav ul li:last-child { margin-right: 0; }
-	#left-nav ul li span { color: #fff; cursor: pointer;  }
+	#left-nav ul li span { cursor: pointer;  }
 	#left-nav ul li span:hover { color: #fff;}
 	#left-nav i { 
 		font-size: 62px;
@@ -99,7 +91,7 @@ input:invalid {
 	}
 	
 	#left-nav a {
-		color: #fff;
+
 	}
 
  #content { width: 100%; float: none; display: block; margin: 25px 0 0 0; }
@@ -117,14 +109,12 @@ input:invalid {
 }
 
 .event-date {
-	color: #fff;
 	text-align: center;
 	width: 80px;
 	float: left;
 }
 
 .event-day {
-	color: #fff;
 	font-size: 42px;
 	display: block;
 	line-height: .7em;
@@ -140,28 +130,22 @@ input:invalid {
 	font-family: 'Arial', san-serif;
 	font-size: 13px;
 	line-height: 1em;
-	color: #dfdfe6;
 }
 
 .event-content a {
-	color: #d7d7dd;
+
 }
 
-
 .document-icon {
-	color: #fff;
 	text-align: center;
 	width: 80px;
 	float: left;
 	font-size: 26px;
 }
 
-
-
 #content {
 	position: relative;
 }
-
 
 #event-sync {
 	position: absolute;
@@ -170,7 +154,6 @@ input:invalid {
 }
 
 #event-sync a {
-	color: #fff;
 	font-size: 24px;
 }
 
@@ -181,9 +164,7 @@ input:invalid {
 }
 
 .list li {
-	border-bottom: 1px solid #59595c;
 	padding: 10px 0;
-	color: #fff;
 }
 
 .list li:last-child {
@@ -191,7 +172,7 @@ input:invalid {
 }
 
 .list li a {
-	color: #fff;
+	
 }
 
 .list .client-name {
@@ -239,17 +220,14 @@ input:invalid {
 
 .listing-address2 {
 	font-size: 12px;
-	color: #bfbfc5;
 }
 
 .month-header {
-	color: #fff; 
 	font-weight: 300; 
 	font-size: 28px; 
 	margin: 2px 0 10px 0;
 	text-align: center;
 }
-
 
 .search-block {
 	margin-bottom: 15px;
